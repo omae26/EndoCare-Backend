@@ -35,35 +35,35 @@ const seedData = async () => {
         name: 'Teresia Omae',
         email: 'teresia.omae@example.com',
         passwordHash: 'Teresia123',
-        profile_image: 'https://example.com/profile_img1.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/smiley-black-teenage-girl-relaxing-outdoors_23-2149012773.jpg?t=st=1725135183~exp=1725138783~hmac=5f1bd1f5fca7cca360b8c164ebaf690834991415e30e5b89b477ef112d73efdb&w=360',
       },
       {
         patient_id: new mongoose.Types.ObjectId(),
         name: 'Hannah Mwangi',
         email: 'hannah.mwangi@example.com',
         passwordHash: 'Hannah123',
-        profile_image: 'https://example.com/profile_img2.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/young-black-woman-with-afro-hair-laughing-enjoying_150588-159.jpg?t=st=1725135142~exp=1725138742~hmac=3964193cd5233981413dadcc53e88e7cfadbbe69b94ebae7a45b03861bde24df&w=740',
       },
       {
         patient_id: new mongoose.Types.ObjectId(),
         name: 'Precious Mueni',
         email: 'precious.mueni@example.com',
         passwordHash: 'Precious123',
-        profile_image: 'https://example.com/profile_img3.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/young-african-american-woman-isolated-yellow-studio-background-facial-expression-beautiful-female-close-up-portrait-concept-human-emotions-facial-expression-smiling-keeping-calm_155003-25193.jpg?t=st=1725135275~exp=1725138875~hmac=b379c53b09ed8ed095029d38abd3ccc1548d143ab7e20fffd72ea287dc20a00b&w=360',
       },
       {
         patient_id: new mongoose.Types.ObjectId(),
         name: 'Faith Wambui',
         email: 'faith.wambui@example.com',
         passwordHash: 'faith123',
-        profile_image: 'https://example.com/profile_img4.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/young-person-portrait-photorealistic-style-with-braids_23-2151570204.jpg?t=st=1725135204~exp=1725138804~hmac=a50432e824705fd76206e0bb45abc7b635bf677abed5e16f74f9c3a69ebbc6fc&w=360',
       },
       {
         patient_id: new mongoose.Types.ObjectId(),
         name: 'Mary Njeri',
         email: 'mary.njeri@example.com',
         passwordHash: 'hashedpassword202',
-        profile_image: 'https://example.com/profile_img5.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/close-up-smiley-woman-outdoors_23-2149002410.jpg?t=st=1725135229~exp=1725138829~hmac=76a7fbb679f279c79a4fd5b5de3d3470e3198aa4c06ddfc027c1a0657725ac45&w=740',
       },
     ]);
 
@@ -74,35 +74,35 @@ const seedData = async () => {
         name: 'Dr. John Doe',
         specialization: 'Gynecologist',
         description: 'Experienced in endometriosis care.',
-        profile_image: 'https://example.com/profile_img1.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/side-view-patient-doctor-s-appointment_23-2149726946.jpg?t=st=1725120636~exp=1725124236~hmac=fa84fc93efc45ece366be210ea87f0ec1724ca4f6a79b1652f1e5ab9c2b70be2&w=740',
       },
       {
         specialist_id: new mongoose.Types.ObjectId(),
         name: 'Dr. Alice Green',
         specialization: 'Nutritionist',
         description: 'Specializes in dietary plans for chronic conditions.',
-        profile_image: 'https://example.com/profile_img2.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/medium-shot-doctor-patient-with-fruits_23-2148302116.jpg?t=st=1725120424~exp=1725124024~hmac=f39ea3de0bcc738dcc2d945298d18f9793d8c72cf22c5fd56a6a1969415aba2b&w=740',
       },
       {
         specialist_id: new mongoose.Types.ObjectId(),
         name: 'Dr. Robert Brown',
         specialization: 'Physical Therapist',
         description: 'Expert in pain management and physical therapy.',
-        profile_image: 'https://example.com/profile_img3.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/medium-shot-young-woman-talking-about-her-pain_23-2149341524.jpg?t=st=1725131561~exp=1725135161~hmac=a005cb009e41fa7f72cec266dc1e00990c9ccee6120f398ce49f3cbda947f6bb&w=740',
       },
       {
         specialist_id: new mongoose.Types.ObjectId(),
         name: 'Dr. Jessica White',
         specialization: 'Endocrinologist',
         description: 'Focuses on hormonal disorders and treatments.',
-        profile_image: 'https://example.com/profile_img4.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/side-view-doctor-wearing-face-mask_23-2149941532.jpg?t=st=1725131777~exp=1725135377~hmac=ea36ad845c358698fb5486ec1f4398ee00e9d96b313b37a8f9d6265384b3414f&w=740',
       },
       {
         specialist_id: new mongoose.Types.ObjectId(),
         name: 'Dr. Michael Black',
         specialization: 'Pain Management Specialist',
         description: 'Offers comprehensive pain management solutions.',
-        profile_image: 'https://example.com/profile_img5.jpg',
+        profile_image: 'https://img.freepik.com/free-photo/doctor-with-folder-his-hands-looks-camera_1157-41934.jpg?t=st=1725131920~exp=1725135520~hmac=e88361c9f12757db5d1a57b98eec16e658126556d1861715bc63b5c1fb0cf49b&w=740',
       },
     ]);
 
@@ -232,7 +232,7 @@ const appointments = await Appointment.create([
         exercise_id: new mongoose.Types.ObjectId(),
         patient_id: patients[0]._id,
         exercise_name: 'Yoga for Back Pain',
-        image_url: 'https://example.com/yoga.jpg',
+        image_url: 'https://i.pinimg.com/564x/37/b9/c4/37b9c444564785750f84831a5600e00a.jpg',
         duration: 30,
         description: 'A gentle yoga routine to relieve back pain.',
         category: 'Back pain exercises',
@@ -241,7 +241,7 @@ const appointments = await Appointment.create([
         exercise_id: new mongoose.Types.ObjectId(),
         patient_id: patients[1]._id,
         exercise_name: 'Stretching Routine',
-        image_url: 'https://example.com/stretching.jpg',
+        image_url: 'https://i.pinimg.com/564x/1a/57/6b/1a576bc3aa4fea0dcaaa673a3149c681.jpg',
         duration: 20,
         description: 'Daily stretching to improve flexibility.',
         category: 'low-effort',
@@ -250,7 +250,7 @@ const appointments = await Appointment.create([
         exercise_id: new mongoose.Types.ObjectId(),
         patient_id: patients[2]._id,
         exercise_name: 'Strength Training',
-        image_url: 'https://example.com/strength.jpg',
+        image_url: 'https://i.pinimg.com/564x/08/d7/ed/08d7edfc304455d23596bc1f97447d21.jpg',
         duration: 45,
         description: 'Strength training exercises to build muscle.',
         category: 'joint-pain',
@@ -259,7 +259,7 @@ const appointments = await Appointment.create([
         exercise_id: new mongoose.Types.ObjectId(),
         patient_id: patients[3]._id,
         exercise_name: 'Pilates',
-        image_url: 'https://example.com/pilates.jpg',
+        image_url: 'https://i.pinimg.com/564x/a3/df/27/a3df27835d77256f68154bd1013e6654.jpg',
         duration: 40,
         description: 'Pilates exercises to strengthen core muscles.',
         category: 'Back pain exercises',
@@ -268,7 +268,7 @@ const appointments = await Appointment.create([
         exercise_id: new mongoose.Types.ObjectId(),
         patient_id: patients[4]._id,
         exercise_name: 'Walking Routine',
-        image_url: 'https://example.com/walking.jpg',
+        image_url: 'https://i.pinimg.com/564x/16/f8/1c/16f81cadd2bab58b39bff5ed9f99b489.jpg',
         duration: 30,
         description: 'A brisk walking routine for overall health.',
         category: 'low-effort',
@@ -280,27 +280,27 @@ const appointments = await Appointment.create([
 const diets = await Diet.create([
   {
     patientId: patients[0]._id,
-    imageUrl: 'https://example.com/healthy_diet1.jpg',
+    imageUrl: 'https://img.freepik.com/free-photo/woman-having-sustainable-lifestyle_23-2148999377.jpg?t=st=1725132249~exp=1725135849~hmac=20277bedfbdaf74833a5adaed539f1d8b9d7a09931743ed96b165def5ebb2047&w=360',
     description: 'Balanced diet plan to manage symptoms.',
   },
   {
     patientId: patients[1]._id,
-    imageUrl: 'https://example.com/healthy_diet2.jpg',
+    imageUrl: 'https://img.freepik.com/free-photo/fresh-fruits-bread-milk-white-background_23-2147862993.jpg?t=st=1725132347~exp=1725135947~hmac=7b772b59d371f36a4001ff1ef6d4e650ed846a5439f4a55a9c8ffd026886c486&w=740',
     description: 'Diet rich in antioxidants and fiber.',
   },
   {
     patientId: patients[2]._id,
-    imageUrl: 'https://example.com/healthy_diet3.jpg',
+    imageUrl: 'https://img.freepik.com/free-photo/diet-week-plan-healthy-vegetables-background_23-2147885844.jpg?t=st=1725132484~exp=1725136084~hmac=f2b3fbcbb9755c951698f0b4944a7b6a641691d61a5a51f61706c470ed2a8059&w=740',
     description: 'Anti-inflammatory diet plan.',
   },
   {
     patientId: patients[3]._id,
-    imageUrl: 'https://example.com/healthy_diet4.jpg',
+    imageUrl: 'https://img.freepik.com/free-photo/grilled-salmon-fish-fillet-fresh-green-lettuce-vegetable-tomato-salad-with-avocado-guacamole-balanced-nutrition-concept-clean-eating-flexitarian-mediterranean-diet_1150-44857.jpg?t=st=1725132531~exp=1725136131~hmac=49a7cbd2517e2b45f065b69f4513a4a290310a7f054a76ab89812a0455fb2361&w=740',
     description: 'Low-sugar and low-carb diet for better health.',
   },
   {
     patientId: patients[4]._id,
-    imageUrl: 'https://example.com/healthy_diet5.jpg',
+    imageUrl: 'https://img.freepik.com/free-photo/hands-holding-notebook-vegetables_23-2148332086.jpg?t=st=1725132608~exp=1725136208~hmac=4d625c3598bc734c4bc27167a786a35c81c01b9208a9fb4c323cae1cd9f7614c&w=740',
     description: 'Diet plan focusing on gut health.',
   },
 ]);
@@ -346,31 +346,31 @@ const diets = await Diet.create([
         blog_id: new mongoose.Types.ObjectId(),
         title: 'Understanding Endometriosis',
         content: 'An in-depth look into what endometriosis is and how it affects the body.',
-        image_url: 'https://example.com/blog1.jpg',
+        image_url: 'https://img.freepik.com/free-vector/hand-drawn-endometriosis-illustration_23-2151311306.jpg?t=st=1725132800~exp=1725136400~hmac=a60114dc24ba8a748ebf6193e9db7f9d0034bd58bd0fa8ff8cd9a8022a3e3640&w=740',
       },
       {
         blog_id: new mongoose.Types.ObjectId(),
         title: 'Treatment Options',
         content: 'Exploring various treatment options for endometriosis.',
-        image_url: 'https://example.com/blog2.jpg',
+        image_url: 'https://img.freepik.com/free-vector/hand-drawn-ivf-illustration_23-2149418721.jpg?t=st=1725132880~exp=1725136480~hmac=ef87f77b82d648688390a34f39d4945355198fb31e08b4ac2ac571c42de8f4b8&w=740',
       },
       {
         blog_id: new mongoose.Types.ObjectId(),
         title: 'Living with Chronic Pain',
         content: 'Tips and strategies for managing chronic pain associated with endometriosis.',
-        image_url: 'https://example.com/blog3.jpg',
+        image_url: 'https://img.freepik.com/free-vector/gynecology-consultation-illustration-concept_23-2148648386.jpg?t=st=1725132948~exp=1725136548~hmac=3fc2142607a9118a531ab4d231b51ceeeede4ff76e22d64dfb507c390abf5910&w=740',
       },
       {
         blog_id: new mongoose.Types.ObjectId(),
         title: 'Nutrition and Endometriosis',
         content: 'How diet can impact endometriosis symptoms and overall health.',
-        image_url: 'https://example.com/blog4.jpg',
+        image_url: 'https://img.freepik.com/free-photo/beautiful-flower-still-life-ovary_23-2149344371.jpg?t=st=1725133074~exp=1725136674~hmac=99a041cc11a3c9bda33dc14a16f41d1caec741f772c4611c2bf4c0b0b9362597&w=740',
       },
       {
         blog_id: new mongoose.Types.ObjectId(),
         title: 'Mental Health and Endometriosis',
         content: 'Addressing the mental health challenges that come with endometriosis.',
-        image_url: 'https://example.com/blog5.jpg',
+        image_url: 'https://img.freepik.com/free-photo/young-depressed-adult-home_23-2149563055.jpg?t=st=1725133176~exp=1725136776~hmac=12131a9c3719c91108d95c959496c0616094b4b084498acfb587a749bf508fa5&w=740',
       },
     ]);
 
@@ -413,7 +413,7 @@ const diets = await Diet.create([
     const insights = await Insight.create([
       {
         category: 'recommended',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/side-view-doctor-talking-patient_23-2149844639.jpg?t=st=1725133961~exp=1725137561~hmac=615da730a3b1c036c6e2001a8d24ccb8b74ea559d828c49208ea92c4810d3553&w=740',
         text: 'Treatment Options',
         slides: [
           'Over-the-counter pain relievers like ibuprofen can help manage pain.',
@@ -425,7 +425,7 @@ const diets = await Diet.create([
       },
       {
         category: 'recommended',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/portrait-braless-woman-home-eating-checking-journal_23-2150501150.jpg?t=st=1725133830~exp=1725137430~hmac=efa7e12b9487f120a37d534f52da46ca6e3c82828131c418ee92be15ae2b7eef&w=740',
         text: 'Lifestyle Tips',
         slides: [
           'Regular exercise can help alleviate symptoms.',
@@ -437,7 +437,7 @@ const diets = await Diet.create([
       },
       {
         category: 'recommended',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/person-sharing-feelings-emotions-therapy-session_23-2151073987.jpg?t=st=1725133903~exp=1725137503~hmac=20a4b190a07b5da4ee23fd34730198ff3d1a9235640f49c8fe8c72c4c53500ed&w=740',
         text: 'Mental Health Support',
         slides: [
           'Seeking therapy or counseling can be beneficial.',
@@ -449,7 +449,7 @@ const diets = await Diet.create([
       },
       {
         category: 'symptoms',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/woman-sitting-with-hurting-stomach_23-2147768319.jpg?t=st=1725134116~exp=1725137716~hmac=489f3ec46d7ed8fd76c3fbadba017bfd1c58a25e8e575b9e224bbe4e6a6c8a96&w=360',
         text: 'Pelvic Pain',
         slides: [
           'Pain in the pelvic region often associated with menstrual cycles.',
@@ -459,7 +459,7 @@ const diets = await Diet.create([
       },
       {
         category: 'symptoms',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-psd/ovaries-uterus-shape-isolated_23-2151354615.jpg?t=st=1725134169~exp=1725137769~hmac=12d80d83382dc8aab2f97cec32753ef76813c8798f66ba26f12388c793e0172c&w=740',
         text: 'Heavy Menstrual Bleeding',
         slides: [
           'Excessive bleeding during menstruation.',
@@ -469,7 +469,7 @@ const diets = await Diet.create([
       },
       {
         category: 'symptoms',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/displeased-curly-haired-young-woman-feels-discomfort-belly-has-diarrhea-frowns-face-presses-hands-belly-has-problems-with-health-eating-disorder_273609-43345.jpg?t=st=1725134248~exp=1725137848~hmac=479839f8ca18a145f2def28a86f4707b326a01e5d17dc914b0995e1fd636ed4a&w=740',
         text: 'Digestive Issues',
         slides: [
           'Pain or discomfort during bowel movements.',
@@ -479,7 +479,7 @@ const diets = await Diet.create([
       },
       {
         category: 'food',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/flat-lay-healthy-immunity-boosting-foods_23-2149211601.jpg?t=st=1725134420~exp=1725138020~hmac=e2959620174b02ac56f5093c42a09129b8f6cbca3063858521d739dd57a4a981&w=740',
         text: 'Anti-inflammatory Foods',
         slides: [
           'Incorporate omega-3 rich foods like salmon and walnuts.',
@@ -489,7 +489,7 @@ const diets = await Diet.create([
       },
       {
         category: 'food',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/serious-displeased-woman-with-afro-hairstyle-shows-refusal-gesture-holds-croissant-denies-eating-dessert-wears-spectacles-striped-jumper_273609-34522.jpg?t=st=1725134501~exp=1725138101~hmac=36c59ffa97d2db9e87b02bc418fbaf3125b77b8674b6d2bdaee5adcc60a2635c&w=740',
         text: 'Foods to Avoid',
         slides: [
           'Reduce intake of red meat and high-fat dairy products.',
@@ -499,7 +499,7 @@ const diets = await Diet.create([
       },
       {
         category: 'food',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/glass-water-macro-shot_53876-65290.jpg?t=st=1725134614~exp=1725138214~hmac=e1de95eac29a8297dc7af15119dfa74dab6575e0e9a88ff8a73fb96ed6b9a606&w=740',
         text: 'Hydration and Nutrition',
         slides: [
           'Drink plenty of water to stay hydrated.',
@@ -509,7 +509,7 @@ const diets = await Diet.create([
       },
       {
         category: 'firstAid',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/close-up-woman-exercising-after-online-instructor_23-2149240299.jpg?t=st=1725134751~exp=1725138351~hmac=cea48f0c4f5c07909cf5631cc04c195a9a047ae8df163673868acb32d182f8c6&w=360',
         text: 'Pain Relief Methods',
         slides: [
           'Use heating pads on the lower abdomen for pain relief.',
@@ -519,7 +519,7 @@ const diets = await Diet.create([
       },
       {
         category: 'firstAid',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/medic-african-ethnicity-helping-sick-patient-clinic-hospital-ward-doctor-using-medical-equipment-technology-young-woman-healthcare-treatment-black-person-bed_482257-16526.jpg?t=st=1725134901~exp=1725138501~hmac=40be2b40e7c1bc3988866f5d961b30e4d4fe1bd7e5334aa82179cd1db4ae47e9&w=740',
         text: 'Emergency Measures',
         slides: [
           'Seek medical attention if experiencing severe pain or bleeding.',
@@ -529,7 +529,7 @@ const diets = await Diet.create([
       },
       {
         category: 'firstAid',
-        image_url: 'https://',
+        image_url: 'https://img.freepik.com/free-photo/education-studying-concept-thoughtful-woman-with-curly-hair-notepad-head-holds-pen-near-temple-thinks-about-what-write-wears-big-round-glasses_273609-34000.jpg?t=st=1725135010~exp=1725138610~hmac=f4af88365c1f4a644e8d4b90272bf3c041f68dce4bcb50c78121813827f17a9a&w=740',
         text: 'Daily Management Tips',
         slides: [
           'Track symptoms in a journal for better management.',
