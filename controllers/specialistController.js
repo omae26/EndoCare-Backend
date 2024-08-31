@@ -99,18 +99,17 @@ exports.updateSpecialist = async (req, res) => {
   }
 };
 
+
 // @desc    Delete a specialist
 // @route   DELETE /api/specialists/:id
 // @access  Private (Only accessible by admins)
 exports.deleteSpecialist = async (req, res) => {
   try {
-    const specialist = await Specialist.findById(req.params.id);
+    const specialist = await Specialist.findByIdAndDelete(req.params.id);
 
     if (!specialist) {
       return res.status(404).json({ msg: 'Specialist not found' });
     }
-
-    await specialist.remove();
 
     res.json({ msg: 'Specialist removed' });
   } catch (err) {

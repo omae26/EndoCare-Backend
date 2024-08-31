@@ -26,7 +26,7 @@ router.get('/:id', getSpecialistById);
 // @route   PUT /api/specialists/:id
 // @desc    Update a specialist
 // @access  Private (Admin only)
-router.put('/:id', updateSpecialist);
+router.patch('/:id', updateSpecialist);
 
 // @route   DELETE /api/specialists/:id
 // @desc    Delete a specialist

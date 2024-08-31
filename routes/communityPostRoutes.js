@@ -1,3 +1,5 @@
+// Routes file: communityPostRoutes.js
+
 const express = require('express');
 const {
   createCommunityPost,
@@ -9,10 +11,11 @@ const {
 
 const router = express.Router();
 
-router.post('/community-posts', createCommunityPost);
-router.get('/community-posts', getCommunityPosts);
-router.get('/community-posts/:id', getCommunityPostById);
-router.put('/community-posts/:id', updateCommunityPost);
-router.delete('/community-posts/:id', deleteCommunityPost);
+// Define routes
+router.post('/', createCommunityPost);        // POST /api/communities
+router.get('/', getCommunityPosts);           // GET /api/communities
+router.get('/:id', getCommunityPostById);     // GET /api/communities/:id
+router.patch('/:id', updateCommunityPost);      // PUT /api/communities/:id
+router.delete('/:id', deleteCommunityPost);   // DELETE /api/communities/:id
 
 module.exports = router;

@@ -17,7 +17,7 @@ app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/specialists', require('./routes/specialistsRoutes'));
 app.use('/api/appointments', require('./routes/appointmentsRoutes'));
 app.use('/api/blogs', require('./routes/blogRoutes'));
-app.use('/api/communities', require('./routes/communityPostRoutes'));
+app.use('/api/communities', require('./routes/communityPostRoutes')); // This should match the routes file
 app.use('/api/diets', require('./routes/dietsRoutes'));
 app.use('/api/exercises', require('./routes/exerciseRoutes'));
 app.use('/api/medications', require('./routes/medicationsRoutes'));

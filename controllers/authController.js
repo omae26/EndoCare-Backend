@@ -93,12 +93,13 @@ exports.loginPatient = async (req, res) => {
   }
 };
 
+
 // @desc    Get logged in patient's info
 // @route   GET /api/auth/me
 // @access  Private
 exports.getMe = async (req, res) => {
   try {
-    const patient = await Patient.findById(req.patient.id).select('-passwordHash');
+    const patient = await Patient.findById(req.patient.id).select('-passwordHash'); // Access the patient's ID via req.patient
     if (!patient) {
       return res.status(404).json({ msg: 'Patient not found' });
     }
@@ -108,3 +109,4 @@ exports.getMe = async (req, res) => {
     res.status(500).send('Server error');
   }
 };
+

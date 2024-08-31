@@ -9,6 +9,10 @@ const blogSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  image_url: {
+    type: String, 
+    default: "",  
+  },
   created_at: {
     type: Date,
     default: Date.now,

@@ -12,7 +12,7 @@ const router = express.Router();
 router.post('/stories', createStory);
 router.get('/stories', getStories);
 router.get('/stories/:id', getStoryById);
-router.put('/stories/:id', updateStory);
+router.patch('/stories/:id', updateStory);
 router.delete('/stories/:id', deleteStory);
 
 module.exports = router;

@@ -20,6 +20,6 @@ router.get('/patient/:patientId', authMiddleware, getMedicationsByPatient);
 // @route   PUT /api/medications/:id/reminder
 // @desc    Update medication reminder status
 // @access  Private
-router.put('/:id/reminder', authMiddleware, updateReminderStatus);
+router.patch('/:id/reminder', authMiddleware, updateReminderStatus);
 
 module.exports = router;

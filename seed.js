@@ -110,7 +110,6 @@ const seedData = async () => {
 // Create appointments
 const appointments = await Appointment.create([
   {
-    appointment_id: new mongoose.Types.ObjectId(),
     patient_id: patients[0]._id,
     hospital_name: 'City Hospital',
     doctors_name: 'Dr. John Doe',
@@ -120,7 +119,7 @@ const appointments = await Appointment.create([
     reminder_sent: false,
   },
   {
-    appointment_id: new mongoose.Types.ObjectId(),
+   
     patient_id: patients[1]._id,
     hospital_name: 'Health Center',
     doctors_name: 'Dr. Alice Green',
@@ -130,7 +129,7 @@ const appointments = await Appointment.create([
     reminder_sent: true,
   },
   {
-    appointment_id: new mongoose.Types.ObjectId(),
+   
     patient_id: patients[2]._id,
     hospital_name: 'General Hospital',
     doctors_name: 'Dr. Robert Brown',
@@ -140,7 +139,7 @@ const appointments = await Appointment.create([
     reminder_sent: false,
   },
   {
-    appointment_id: new mongoose.Types.ObjectId(),
+    
     patient_id: patients[3]._id,
     hospital_name: 'Private Clinic',
     doctors_name: 'Dr. Jessica White',
@@ -150,8 +149,7 @@ const appointments = await Appointment.create([
     reminder_sent: true,
   },
   {
-    appointment_id: new mongoose.Types.ObjectId(),
-    patient_id: patients[4]._id,
+     patient_id: patients[4]._id,
     hospital_name: 'Specialist Care',
     doctors_name: 'Dr. Michael Black',
     appointment_date: new Date(),
