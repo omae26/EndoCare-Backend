@@ -8,6 +8,7 @@ const Diet = require('./models/Diet');
 const CommunityPost = require('./models/CommunityPost');
 const Blog = require('./models/Blog');
 const Story = require('./models/Story');
+const Insight = require('./models/Insight')
 require('dotenv').config();
 const connectDB = require('./config/db');
 
@@ -407,6 +408,137 @@ const diets = await Diet.create([
       },
     ]);
 
+    // // Create insights
+   
+    const insights = await Insight.create([
+      {
+        category: 'recommended',
+        image_url: 'https://',
+        text: 'Treatment Options',
+        slides: [
+          'Over-the-counter pain relievers like ibuprofen can help manage pain.',
+          'Hormone therapy may reduce or eliminate symptoms.',
+          'Surgical options are available for severe cases.',
+          'Alternative therapies such as acupuncture can provide relief.',
+          'Support groups and counseling can be beneficial.',
+        ],
+      },
+      {
+        category: 'recommended',
+        image_url: 'https://',
+        text: 'Lifestyle Tips',
+        slides: [
+          'Regular exercise can help alleviate symptoms.',
+          'Managing stress through relaxation techniques can be helpful.',
+          'Maintaining a balanced diet supports overall health.',
+          'Getting adequate rest and sleep is important.',
+          'Keeping track of symptoms and triggers can aid in management.',
+        ],
+      },
+      {
+        category: 'recommended',
+        image_url: 'https://',
+        text: 'Mental Health Support',
+        slides: [
+          'Seeking therapy or counseling can be beneficial.',
+          'Connecting with others who have endometriosis can provide support.',
+          'Practicing mindfulness and stress-reduction techniques may help.',
+          'Joining support groups for emotional and practical support.',
+          'Maintaining a positive outlook and focusing on self-care.',
+        ],
+      },
+      {
+        category: 'symptoms',
+        image_url: 'https://',
+        text: 'Pelvic Pain',
+        slides: [
+          'Pain in the pelvic region often associated with menstrual cycles.',
+          'May worsen with physical activity or intercourse.',
+          'Can vary from mild to severe and may impact daily life.',
+        ],
+      },
+      {
+        category: 'symptoms',
+        image_url: 'https://',
+        text: 'Heavy Menstrual Bleeding',
+        slides: [
+          'Excessive bleeding during menstruation.',
+          'Can lead to anemia and fatigue.',
+          'May be accompanied by clotting and prolonged periods.',
+        ],
+      },
+      {
+        category: 'symptoms',
+        image_url: 'https://',
+        text: 'Digestive Issues',
+        slides: [
+          'Pain or discomfort during bowel movements.',
+          'Diarrhea or constipation may occur.',
+          'Symptoms may fluctuate with menstrual cycle.',
+        ],
+      },
+      {
+        category: 'food',
+        image_url: 'https://',
+        text: 'Anti-inflammatory Foods',
+        slides: [
+          'Incorporate omega-3 rich foods like salmon and walnuts.',
+          'Include fruits and vegetables with high antioxidant content.',
+          'Avoid processed foods and sugary items.',
+        ],
+      },
+      {
+        category: 'food',
+        image_url: 'https://',
+        text: 'Foods to Avoid',
+        slides: [
+          'Reduce intake of red meat and high-fat dairy products.',
+          'Limit consumption of caffeine and alcohol.',
+          'Avoid foods high in refined sugars and trans fats.',
+        ],
+      },
+      {
+        category: 'food',
+        image_url: 'https://',
+        text: 'Hydration and Nutrition',
+        slides: [
+          'Drink plenty of water to stay hydrated.',
+          'Opt for a balanced diet with whole grains and lean proteins.',
+          'Stay mindful of portion sizes and avoid overeating.',
+        ],
+      },
+      {
+        category: 'firstAid',
+        image_url: 'https://',
+        text: 'Pain Relief Methods',
+        slides: [
+          'Use heating pads on the lower abdomen for pain relief.',
+          'Consider over-the-counter pain medications like ibuprofen.',
+          'Practice gentle stretching and relaxation exercises.',
+        ],
+      },
+      {
+        category: 'firstAid',
+        image_url: 'https://',
+        text: 'Emergency Measures',
+        slides: [
+          'Seek medical attention if experiencing severe pain or bleeding.',
+          'Contact a healthcare provider if symptoms worsen significantly.',
+          'Keep a record of symptoms and share with your doctor.',
+        ],
+      },
+      {
+        category: 'firstAid',
+        image_url: 'https://',
+        text: 'Daily Management Tips',
+        slides: [
+          'Track symptoms in a journal for better management.',
+          'Adopt a consistent routine for managing symptoms.',
+          'Stay in touch with your healthcare provider for ongoing support.',
+        ],
+      },
+    ]);
+       
     console.log('Seed data successfully inserted!');
   } catch (err) {
     console.error('Error seeding data:', err);
