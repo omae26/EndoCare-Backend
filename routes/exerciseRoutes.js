@@ -27,7 +27,7 @@ router.get('/:id', getExerciseById);
 // @route   PUT /api/exercises/:id
 // @desc    Update an exercise
 // @access  Private
-router.put('/:id', updateExercise);
+router.patch('/:id', updateExercise);
 
 // @route   DELETE /api/exercises/:id
 // @desc    Delete an exercise

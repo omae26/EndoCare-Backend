@@ -12,7 +12,7 @@ router.get('/category/:category', insightController.getInsightsByCategory);
 router.post('/', insightController.createInsight);
 
 // Update an existing insight
-router.put('/:id', insightController.updateInsight);
+router.patch('/:id', insightController.updateInsight);
 
 // Delete an insight
 router.delete('/:id', insightController.deleteInsight);

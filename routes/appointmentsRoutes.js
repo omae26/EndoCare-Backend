@@ -7,20 +7,20 @@ const { createAppointment, getAppointmentsByUser, getAppointmentById, updateAppo
 // @access  Private
 router.post('/', createAppointment);
 
-// @route   GET /api/appointments/user/:user_id
-// @desc    Get all appointments for a user
+// @route   GET /api/appointments/patients/:patient_id
+// @desc    Get all appointments for a patient
 // @access  Private
-router.get('/user/:user_id', getAppointmentsByUser);
+router.get('/patients/:patient_id', getAppointmentsByUser);
 
 // @route   GET /api/appointments/:id
 // @desc    Get a single appointment by ID
 // @access  Private
 router.get('/:id', getAppointmentById);
 
-// @route   PUT /api/appointments/:id
-// @desc    Update an appointment
+// @route   PATCH /api/appointments/:id
+// @desc    Partially update an appointment
 // @access  Private
-router.put('/:id', updateAppointment);
+router.patch('/:id', updateAppointment);
 
 // @route   DELETE /api/appointments/:id
 // @desc    Delete an appointment

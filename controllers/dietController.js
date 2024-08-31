@@ -40,13 +40,12 @@ exports.getDietsByPatient = async (req, res) => {
 // @access  Private
 exports.deleteDiet = async (req, res) => {
   try {
-    const diet = await Diet.findById(req.params.id);
+    const diet = await Diet.findByIdAndDelete(req.params.id);
 
     if (!diet) {
       return res.status(404).json({ msg: 'Diet not found' });
     }
 
-    await diet.remove();
     res.json({ msg: 'Diet removed' });
   } catch (err) {
     console.error(err.message);

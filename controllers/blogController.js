@@ -4,12 +4,13 @@ const Blog = require('../models/Blog');
 // @route   POST /api/blogs
 // @access  Private
 exports.createBlog = async (req, res) => {
-  const { title, content } = req.body;
+  const { title, content, image_url } = req.body;
 
   try {
     const blog = new Blog({
       title,
       content,
+      image_url,
     });
 
     await blog.save();
@@ -53,7 +54,7 @@ exports.getBlogById = async (req, res) => {
 // @route   PUT /api/blogs/:id
 // @access  Private
 exports.updateBlog = async (req, res) => {
-  const { title, content } = req.body;
+  const { title, content, image_url } = req.body;
 
   try {
     let blog = await Blog.findById(req.params.id);
@@ -82,10 +83,11 @@ exports.deleteBlog = async (req, res) => {
       return res.status(404).json({ msg: 'Blog not found' });
     }
 
-    await blog.remove();
+    await Blog.deleteOne({ _id: req.params.id });
     res.json({ msg: 'Blog removed' });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server error');
   }
 };
+

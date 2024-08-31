@@ -25,7 +25,7 @@ exports.createAppointment = async (req, res) => {
 };
 
 // @desc    Get all appointments for a user
-// @route   GET /api/appointments/user/:patient_id
+// @route   GET /api/appointments/patient/:patient_id
 // @access  Private
 exports.getAppointmentsByUser = async (req, res) => {
   try {
@@ -68,19 +68,16 @@ exports.updateAppointment = async (req, res) => {
       return res.status(404).json({ msg: 'Appointment not found' });
     }
 
-    appointment = await Appointment.findByIdAndUpdate(
-      req.params.id,
-      {
-        hospital_name,
-        doctors_name,
-        appointment_date,
-        time,
-        status,
-        reminder_sent
-      },
-      { new: true }
-    );
+    // Update only the provided fields
+    if (hospital_name) appointment.hospital_name = hospital_name;
+    if (doctors_name) appointment.doctors_name = doctors_name;
+    if (appointment_date) appointment.appointment_date = appointment_date;
+    if (time) appointment.time = time;
+    if (status) appointment.status = status;
+    if (reminder_sent !== undefined) appointment.reminder_sent = reminder_sent;
 
+    appointment = await appointment.save();
+    
     res.json(appointment);
   } catch (err) {
     console.error(err.message);
@@ -88,21 +85,22 @@ exports.updateAppointment = async (req, res) => {
   }
 };
 
+
 // @desc    Delete an appointment
 // @route   DELETE /api/appointments/:id
 // @access  Private
 exports.deleteAppointment = async (req, res) => {
   try {
-    const appointment = await Appointment.findById(req.params.id);
+    const result = await Appointment.deleteOne({ _id: req.params.id });
 
-    if (!appointment) {
+    if (result.deletedCount === 0) {
       return res.status(404).json({ msg: 'Appointment not found' });
     }
 
-    await appointment.remove();
     res.json({ msg: 'Appointment removed' });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server error');
   }
 };
+

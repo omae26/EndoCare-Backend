@@ -85,15 +85,16 @@ exports.updateExercise = async (req, res) => {
 // @access  Private
 exports.deleteExercise = async (req, res) => {
   try {
-    const exercise = await Exercise.findById(req.params.id);
+    const exercise = await Exercise.findByIdAndDelete(req.params.id);
+    
     if (!exercise) {
       return res.status(404).json({ msg: 'Exercise not found' });
     }
 
-    await exercise.remove();
     res.json({ msg: 'Exercise removed' });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server error');
   }
 };
+
